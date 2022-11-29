@@ -4,6 +4,8 @@ import { AppService } from './app.service';
 import { PetModule } from './pet/pet.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { Pet } from './pet/entities/pet.entity';
+import { EmplyeeModule } from './emplyee/emplyee.module';
+import { Emplyee } from './emplyee/entities/emplyee.entity';
 
 @Module({
   imports: [
@@ -14,10 +16,11 @@ import { Pet } from './pet/entities/pet.entity';
       username: 'my_user',
       password: 'password123',
       database: 'my_database',
-      entities: [Pet],
+      entities: [Pet, Emplyee],
       synchronize: true,
     }),
     PetModule,
+    EmplyeeModule,
   ],
   controllers: [AppController],
   providers: [AppService],
