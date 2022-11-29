@@ -12,7 +12,7 @@ Group members :
 
 ### Backend
 
-Typescript/NestJS
+Typescript/NestJS : A node JS frameworkr highly similiar to Spring boot
 
 ### Database
 
