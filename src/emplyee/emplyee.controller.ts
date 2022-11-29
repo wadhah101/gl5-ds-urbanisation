@@ -30,11 +30,11 @@ export class EmplyeeController {
     return this.emplyeeService.findOne(+id);
   }
 
-  @Get('salary-euro/:id')
+  @Get(':id/salary-euro')
   salaryEuro(@Param('id') id: string) {
     return this.emplyeeService.salaryEuro(+id);
   }
-  @Get('salary-dollar/:id')
+  @Get(':id/salary-dollar')
   salaryDollar(@Param('id') id: string) {
     return this.emplyeeService.salaryDollars(+id);
   }
