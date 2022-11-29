@@ -74,3 +74,76 @@ export class EmplyeeController {
   }
   // ....
 ```
+
+## RAML api
+
+You will find the api defined in `doc/api/spec.raml`
+
+```raml
+#%RAML 1.0
+resourceTypes:
+  Collection:
+    get:
+      responses:
+        200:
+          body:
+            application/json:
+              type: <<item>>[]
+    post:
+      body:
+        application/json:
+          type: <<item>>
+  Member:
+    get: 
+      responses : 
+        200 : 
+          body:
+            application/json:
+              type: <<item>>
+    delete:
+      responses:
+        204:
+    put:
+      body:
+        application/json:
+          type: <<item>>
+  Salary:
+    get:
+      responses:
+        200:
+          body:
+            application/json:
+              properties:
+                salary: number
+              
+title: My-API
+version: v1
+baseUri: http://localhost:3000
+types:
+  Employee:
+    properties:
+      id: number
+      name: string
+      salaryDollars: number
+
+/employee:
+  type: { Collection: {item : Employee} }
+  /{id}:
+    type: { Member: {item : Employee} }
+    /salary-euro:
+      type: Salary
+    /salary-dollar:
+      type: Salary
+```
+
+## Endpoint studio screenshots
+
+### Anypoint console
+
+![](doc/screenshots/Screenshot%20from%202022-11-29%2017-13-11.png)
+![](doc/screenshots/Screenshot%20from%202022-11-29%2017-13-15.png)
+![](doc/screenshots/Screenshot%20from%202022-11-29%2017-13-24.png)
+
+## Consuming our api service from Anypoint studio
+
+![](doc/screenshots/Screenshot%20from%202022-11-29%2017-18-26.png)

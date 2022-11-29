@@ -12,6 +12,12 @@ resourceTypes:
         application/json:
           type: <<item>>
   Member:
+    get: 
+      responses : 
+        200 : 
+          body:
+            application/json:
+              type: <<item>>
     delete:
       responses:
         204:
@@ -30,7 +36,7 @@ resourceTypes:
               
 title: My-API
 version: v1
-baseUri: http://localhost:300
+baseUri: http://localhost:3000
 types:
   Employee:
     properties:
