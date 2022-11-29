@@ -136,7 +136,7 @@ types:
       type: Salary
 ```
 
-## Endpoint studio screenshots
+## Anypoint studio screenshots
 
 ### Anypoint console
 
