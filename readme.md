@@ -144,6 +144,6 @@ types:
 ![](doc/screenshots/Screenshot%20from%202022-11-29%2017-13-15.png)
 ![](doc/screenshots/Screenshot%20from%202022-11-29%2017-13-24.png)
 
-## Consuming our api service from Anypoint studio
+## Consuming our API service from Anypoint studio
 
 ![](doc/screenshots/Screenshot%20from%202022-11-29%2017-18-26.png)
