@@ -18,6 +18,8 @@ Typescript/NestJS : A node JS frameworkr highly similiar to Spring boot
 
 postgresql
 
+You will find the dump in `dump.sql`
+
 ## Creating the project
 
 ```bash
@@ -115,7 +117,7 @@ resourceTypes:
             application/json:
               properties:
                 salary: number
-              
+
 title: My-API
 version: v1
 baseUri: http://localhost:3000
@@ -136,7 +138,7 @@ types:
       type: Salary
 ```
 
-## Anypoint studio screenshots
+## Endpoint studio screenshots
 
 ### Anypoint console
 
@@ -144,6 +146,6 @@ types:
 ![](doc/screenshots/Screenshot%20from%202022-11-29%2017-13-15.png)
 ![](doc/screenshots/Screenshot%20from%202022-11-29%2017-13-24.png)
 
-## Consuming our API service from Anypoint studio
+## Consuming our api service from Anypoint studio
 
 ![](doc/screenshots/Screenshot%20from%202022-11-29%2017-18-26.png)
