@@ -30,6 +30,15 @@ export class EmplyeeController {
     return this.emplyeeService.findOne(+id);
   }
 
+  @Get('salary-euro/:id')
+  salaryEuro(@Param('id') id: string) {
+    return this.emplyeeService.salaryEuro(+id);
+  }
+  @Get('salary-dollar/:id')
+  salaryDollar(@Param('id') id: string) {
+    return this.emplyeeService.salaryDollars(+id);
+  }
+
   @Patch(':id')
   update(@Param('id') id: string, @Body() updateEmplyeeDto: UpdateEmplyeeDto) {
     return this.emplyeeService.update(+id, updateEmplyeeDto);

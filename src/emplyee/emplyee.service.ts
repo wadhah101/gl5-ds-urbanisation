@@ -30,4 +30,14 @@ export class EmplyeeService {
   async remove(id: number) {
     return this.employeeRepo.delete({ id });
   }
+
+  async salaryDollars(id: number) {
+    const e = await this.employeeRepo.findOne({ where: { id } });
+    return { salary: e.salaryDollars };
+  }
+
+  async salaryEuro(id: number) {
+    const e = await this.employeeRepo.findOne({ where: { id } });
+    return { salary: e.salaryDollars * 0.97 };
+  }
 }
